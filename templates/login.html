@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+{% if messages %}
+<div class="warning-message">
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+
+<form action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    <div class="container">
+
+        
+        <label for="{{ form.username.id_for_label }}">Username:</label>
+        
+        <input type="text" name="{{ form.username.name }}" id="{{ form.username.id_for_label }}" class="form-control"
+            value="{{ form.username.value }}">
+        {% for error in form.username.errors %}
+        <span class="error-message small">{{ error }}</span>
+        {% endfor %}
+
+     
+        <label for="{{ form.password.id_for_label }}">Password:</label>
+        <input type="password" name="{{ form.password.name }}" id="{{ form.password.id_for_label }}"
+            class="form-control" value="{{ form.password.value }}">
+        {% for error in form.password.errors %}
+        <span class="error-message small">{{ error }}</span>
+        {% endfor %}
+
+        <button type="submit">Login</button>
+
+        <label>
+            <a href="{% url 'register' %}" style="color: blanchedalmond;">Create a new account</a>
+        </label>
+    </div>
+</form>
+
+{% endblock %}

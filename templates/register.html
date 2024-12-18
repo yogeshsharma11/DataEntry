@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="post" action="{% url 'register' %}">
+    {% csrf_token %}
+    <div class="container">
+        <h1 style="text-align: center;">Register</h1>
+        <hr>
+
+        <label for="{{ form.username.id_for_label }}" class="form-label">Username:</label>
+        <input type="text" name="{{ form.username.name }}" id="{{ form.username.id_for_label }}"
+            value="{{ form.username.value }}" class="form-control">
+        {% for error in form.username.errors %}
+        <span class="text-danger small">{{ error }}</span>
+        {% endfor %}
+
+        <label for="{{ form.password1.id_for_label }}" class="form-label">Password:</label>
+        <input type="password" name="{{ form.password1.name }}" id="{{ form.password1.id_for_label }}"
+            value="{{ form.password1.value }}" class="form-control">
+        {% for error in form.password1.errors %}
+        <span class="text-danger small">{{ error }}</span>
+        {% endfor %}
+        
+        
+        <label for="{{ form.password2.id_for_label }}" class="form-label">Re-Type Password:</label>
+        <input type="password" name="{{ form.password2.name }}" id="{{ form.password2.id_for_label }}"
+            value="{{ form.password2.value }}" class="form-control">
+        {% for error in form.password2.errors %}
+        <span class="text-danger small">{{ error }}</span>
+        {% endfor %}
+ 
+        <button type="submit">Submit</button>
+        <p>Already have an account? <a href="{% url 'login' %}" class="btn btn-link text-white">Login</a></p>
+
+</form>
+
+{% endblock %}

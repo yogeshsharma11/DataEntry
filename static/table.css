@@ -1,0 +1,131 @@
+.table-container {
+    
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    padding-top: 45px;
+
+
+    .delete{
+            background-color: red;
+            border-radius: 10px;
+            padding: 5px;
+    }
+
+    .edit{
+        background-color:darkgreen;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    
+}
+
+table {
+    border-collapse: collapse; 
+    width: 50%; 
+    border: 1px black;
+    backdrop-filter: blur(5px);
+}
+th{
+    font-weight: bold;
+    border: 1px solid black; 
+    padding: 8px; 
+    text-align: left; 
+}
+
+td {
+    border: 1px solid black; 
+    padding: 8px; 
+    text-align: left; 
+}
+
+th {
+    background-color: #251d1d; 
+}
+
+.add
+{
+    width: 131px;
+    background-color:rgb(75, 52, 52);
+    border-radius: 20px;
+
+}
+
+
+.AddData{
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    height: 30vh;
+    align-items: center;
+
+    label{
+        width: 100px;
+        display: inline-block;
+    }
+
+    .btn:hover{    
+        background-color: rgba(63, 52, 221, 0.918);
+        transition: all;
+        transition-duration: 200ms;
+        border-radius: 20px;
+
+    }
+
+    h3{
+        color:bisque;
+        font-weight: bold;
+    }
+
+ 
+ form{
+    border: 1px solid black;
+    border-radius: 20px;
+    backdrop-filter: blur(45px);
+    width: 395px;
+}
+}
+.AddData input[type=tel] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.current{
+font-weight: bold;
+color:darkgoldenrod;
+display: flex;
+justify-content: center;
+
+}
+
+.download-button{
+    margin-left: 928px;
+    font-size: x-large;
+}
+
+.pagination{
+        display: flex;
+        justify-content: center;
+        a{
+            margin-left: 8px;
+        }  
+}
+
+
+.messages p{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 11px;
+    margin-top: -19px;
+    color: burlywood;
+
+}
+

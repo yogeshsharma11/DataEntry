@@ -1,0 +1,57 @@
+.Editdata{
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    height: 30vh;
+    align-items: center;
+    padding-top: 214px;
+
+    label{
+        width: 100px;
+        display: inline-block;
+    }
+
+    .btn:hover{    
+        background-color: rgba(63, 52, 221, 0.918);
+        transition: all;
+        transition-duration: 200ms;
+        border-radius: 20px;
+
+    }
+
+    h2{
+        color:bisque;
+        font-weight: bold;
+    }
+
+ 
+ form{
+    border: 1px solid black;
+    border-radius: 20px;
+    backdrop-filter: blur(45px);
+    width: 395px;
+   }
+
+ 
+}
+.Editdata input[type=tel] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+.back{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 205px;
+    padding-left: 500px;
+
+    a{
+        color:darkseagreen
+    }
+ }
